@@ -46,7 +46,6 @@ public class Main {
     }
 
     public static String calc(String input) throws NumberFormatException {
-        Scanner scanner = new Scanner(System.in);
         String textConsole = input;
         textConsole = textConsole.replaceAll("\\s+", "");
         String[] splitArabic = textConsole.split("\\D+");
@@ -114,14 +113,9 @@ public class Main {
     }
 // main-body
     public static void main(String[] arg){
-        Main.calc("5+5");
-        Main.calc("7+5");
-        Main.calc("5*9");
-        Main.calc("5/1");
-        Main.calc("V*V");
-        Main.calc("V/II");
-        Main.calc("V+I");
-        Main.calc("X-V");
+        Scanner scanner = new Scanner(System.in);
+        String textConsole = scanner.next();
+        Main.calc(textConsole);
     }
 }
 
